@@ -6,4 +6,7 @@ public abstract class Var {
     public String toString() {
         return "Я Var";
     }
+
+    protected Var add(Vector vector) {
+    }
 }
