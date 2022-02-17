@@ -11,6 +11,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/by/itland/itjava/Artyr000" />
       <excludeFolder url="file://$MODULE_DIR$/src/by/itland/itjava/timshina" />
       <excludeFolder url="file://$MODULE_DIR$/src/by/itland/itjava/drobyazko/lesson11" />
+      <excludeFolder url="file://$MODULE_DIR$/src/by/itland/itjava/drobyazko/lesson13" />
     </content>
     <content url="file://$MODULE_DIR$/out" />
     <orderEntry type="inheritedJdk" />
