@@ -63,24 +63,31 @@ public class Matrix extends Var {
 
     }
 
-//    @Override
-//    public Var mull(Var other) {
-//        if (other instanceof Matrix) {
-//            Matrix operand2 = (Matrix) other;
-//            if (this.matr[0].length == operand2.matr.length) {
-//                //код
-//                return new Matrix();
-//            }
-//
-//        } else if (other instanceof Vector) {
-//            //код
+    @Override
+    public Var mull(Var other) {
+        if (other instanceof Matrix) {
+            Matrix operand2 = (Matrix) other;
+            if (this.matr[0].length == operand2.matr.length) {
+                double[][] matr = new double[this.matr.length][operand2.matr[0].length];
+                for (int i = 0; i < matr.length; i++) {
+                    for (int j = 0; j < matr[0].length; j++) {
+                        for (int k = 0; k < matr.length; k++) {
+                            matr[i][j] += matr[i][k] * matr[k][j];
+                        }
+                    }
+                }
+                return new Matrix(matr);
+            }
+
+        } else if (other instanceof Vector) {
+            //код
 //            return new Vector();
-//        } else if (other instanceof Scalar) {
-//            //код
+        } else if (other instanceof Scalar) {
+            //код
 //            return new Matrix();
-//        }
-//        return super.mull(other);
-//    }
+        }
+        return super.mull(other);
+    }
 
     @Override
     public Var sub(Var other) {
