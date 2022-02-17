@@ -8,5 +8,6 @@ public abstract class Var {
     }
 
     protected Var add(Vector vector) {
+
     }
 }
