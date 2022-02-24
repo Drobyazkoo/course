@@ -1,4 +1,4 @@
-package by.itland.itjava.drobyazko.lesson14;
+package by.itland.itjava.drobyazko.lesson14_3;
 
 public class Scalar extends Var {
 
