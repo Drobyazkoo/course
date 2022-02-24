@@ -1,4 +1,4 @@
-package by.itland.itjava.drobyazko.lesson14;
+package by.itland.itjava.drobyazko.lesson14_3;
 
 public class Matrix extends Var {
 
@@ -56,6 +56,7 @@ public class Matrix extends Var {
                     arr[i][j] = this.matr[i][j] + operand2.getValue();
                 }
             }
+            return new Matrix(arr);
         }
 
 
