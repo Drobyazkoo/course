@@ -2,34 +2,33 @@ package by.itland.itjava.drobyazko.lesson14_3;
 
 public abstract class Var implements Operation{
     @Override
-    public Var add(Var other) {
-        System.out.println("Error: сложение" + this.getClass().getSimpleName() + "невозможна с" +
+    public Var add(Var other) throws CalcException {
+        throw new CalcException("Error: сложение" + this.getClass().getSimpleName() + "невозможна с" +
                 other.getClass().getSimpleName());
-        return null;
+//        System.out.println("Error: сложение" + this.getClass().getSimpleName() + "невозможна с" +
+//                other.getClass().getSimpleName());
     }
 
     @Override
-    public Var sub(Var other) {
-        System.out.println("Error: вычитание" + this.getClass().getSimpleName() + "невозможна с" +
+    public Var sub(Var other) throws CalcException {
+        throw new CalcException("Error: вычитание" + this.getClass().getSimpleName() + "невозможна с" +
                 other.getClass().getSimpleName());
-        return null;
+
     }
 
     @Override
-    public Var mull(Var other) {
-        System.out.println("Error: произведение" + this.getClass().getSimpleName() + "невозможна с" +
+    public Var mull(Var other) throws CalcException {
+        throw  new CalcException("Error: произведение" + this.getClass().getSimpleName() + "невозможна с" +
                 other.getClass().getSimpleName());
-        return null;
     }
 
     @Override
-    public Var div(Var other) {
-        System.out.println("Error: частное" + this.getClass().getSimpleName() + "невозможна с" +
+    public Var div(Var other) throws CalcException {
+        throw new CalcException("Error: частное" + this.getClass().getSimpleName() + "невозможна с" +
                 other.getClass().getSimpleName());
-        return null;
     }
 
-    public static Var createVar(String operand){
+    public static Var createVar(String operand) throws CalcException {
         if(operand.matches(Patterns.SCALAR))
             return new Scalar(operand);
 
@@ -39,7 +38,7 @@ public abstract class Var implements Operation{
         else if(operand.matches(Patterns.MATRIX))
             return new Matrix(operand);
 
-        return null;
+        throw new CalcException();
 
     }
 

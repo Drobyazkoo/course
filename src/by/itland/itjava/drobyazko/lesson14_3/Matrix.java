@@ -34,7 +34,7 @@ public class Matrix extends Var {
     }
 
     @Override
-    public Var add(Var other) {
+    public Var add(Var other) throws CalcException {
         if (other instanceof Matrix) {
             Matrix operand2 = (Matrix) other;
             if (this.matr.length == operand2.matr.length) {
@@ -65,7 +65,7 @@ public class Matrix extends Var {
     }
 
     @Override
-    public Var mull(Var other) {
+    public Var mull(Var other)throws CalcException {
         if (other instanceof Matrix) {
             Matrix operand2 = (Matrix) other;
             if (this.matr[0].length == operand2.matr.length) {
@@ -91,7 +91,7 @@ public class Matrix extends Var {
     }
 
     @Override
-    public Var sub(Var other) {
+    public Var sub(Var other) throws CalcException{
         if (other instanceof Matrix) {
             Matrix operand2 = (Matrix) other;
             if (this.matr.length == operand2.matr.length) {

@@ -1,7 +1,7 @@
 package by.itland.itjava.drobyazko.lesson14_3;
 
 public class Runner {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CalcException {
         Var scalar = new Scalar("5");
         Var scalar2 = new Scalar("5");
         Var vector = new Vector("{1, 2, 3}");

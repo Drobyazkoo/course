@@ -8,8 +8,13 @@ public class ConsoleRunner {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
-        Var result = parser.calculate(input);
-        System.out.println(result);
+        Var result = null;
+        try {
+            result = parser.calculate(input);
+            System.out.println(result);
+        } catch (CalcException e) {
+            System.err.println(e.getMessage());
+        }
 
     }
 }

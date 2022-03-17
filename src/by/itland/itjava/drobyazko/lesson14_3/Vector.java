@@ -25,7 +25,7 @@ public class Vector extends Var {
     }
 
     @Override
-    public Var add(Var other) {
+    public Var add(Var other) throws CalcException {
         if (other instanceof Scalar) {
             Scalar operand2 = (Scalar) other;
             double[] result = new double[this.value.length];

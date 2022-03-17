@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Parser {
     //trim удаляет
     //pars разделяет
-    public Var calculate(String text) {
+    public Var calculate(String text) throws CalcException {
         String[] operands = text.trim().split(Patterns.OPERATION);
         Var leftOperand = Var.createVar(operands[0]);
         Var rightOperand = Var.createVar(operands[1]);
@@ -22,6 +22,6 @@ public class Parser {
                 case "/": return leftOperand.div(rightOperand);
             }
         }
-        return null;
+        throw new CalcException();
     }
 }
